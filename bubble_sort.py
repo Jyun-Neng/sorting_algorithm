@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def bubble_sort(num):
+def bubbleSort(num):
     """
     Bubble sort algorithm. 
     Input: number sequence
@@ -26,6 +26,6 @@ if __name__ == '__main__':
     num = np.random.randint(low, high, size)
     print('----before sort----')
     print(num)
-    sorted_num = bubble_sort(num)
+    sorted_num = bubbleSort(num)
     print('----after sort----')
     print(sorted_num)

@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def insertion_sort(num_seq):
+def insertionSort(num_seq):
     """
     Insertion sort algorithm.
     Input: number sequence
@@ -21,7 +21,7 @@ def insertion_sort(num_seq):
 if __name__ == '__main__':
     low, high, size = 0, 100, 20
     num_seq = np.random.randint(low, high, size)
-    sorted_seq = insertion_sort(num_seq)
+    sorted_seq = insertionSort(num_seq)
     print('----before sort----')
     print(num_seq)
     print('----after sort----')

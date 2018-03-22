@@ -23,7 +23,7 @@ def merge(num_seq, first, middle, last):
             i += 1
 
 
-def merge_sort(num_seq, first, last):
+def mergeSort(num_seq, first, last):
     """
     Merge sort algorithm.
     Input: number sequence, first index, last index
@@ -31,8 +31,8 @@ def merge_sort(num_seq, first, last):
     """
     if first < last:
         middle = (first + last) // 2
-        merge_sort(num_seq, first, middle)
-        merge_sort(num_seq, middle + 1, last)
+        mergeSort(num_seq, first, middle)
+        mergeSort(num_seq, middle + 1, last)
         merge(num_seq, first, middle, last)
 
 
@@ -41,6 +41,6 @@ if __name__ == '__main__':
     num_seq = np.random.randint(low, high, size)
     print('----before sort----')
     print(num_seq)
-    merge_sort(num_seq, 0, size - 1)
+    mergeSort(num_seq, 0, size - 1)
     print('----after sort----')
     print(num_seq)
