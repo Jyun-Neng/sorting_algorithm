@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def bubble_sort(num):
     """
     Bubble sort algorithm. 
@@ -8,16 +9,17 @@ def bubble_sort(num):
     Complexity: Worst-case O(n^2), Best-case O(n)
     """
     size = len(num)
-    swapped = True 
+    swapped = True
     for i in range(size):
-        if swapped is not True: 
+        if swapped is not True:
             return num
         swapped = False
-        for j in range(size-i-1):
-            if num[j] > num[j+1]:
+        for j in range(size - i - 1):
+            if num[j] > num[j + 1]:
                 swapped = True
-                num[j], num[j+1] = num[j+1], num[j]
+                num[j], num[j + 1] = num[j + 1], num[j]
     return num
+
 
 if __name__ == '__main__':
     low, high, size = 0, 100, 20
