@@ -13,9 +13,9 @@ def countingSort(num_seq, sorted_seq, size):
         cnt[num] += 1
     for i in range(1, size):
         cnt[i] += cnt[i-1]
-    for num in num_seq:
-        sorted_seq[cnt[num]-1] = num
-        cnt[num] -= 1
+    for i in reversed(range(len(num_seq))):
+        sorted_seq[cnt[num_seq[i]]-1] = num_seq[i]
+        cnt[num_seq[i]] -= 1
 
 if __name__ == '__main__':
     upper, size = 100, 20
